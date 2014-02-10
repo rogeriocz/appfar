@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+
+ <h2>Bienvenido al sistema</h2><br>
+ <h3><p>Hola: <%= current_user.name %></p></h3>
+
+ <% else %>
+
+<div class="row">
+        <div class="col-md-4">
+        <h2>Bienvenido a PAC</h2>
+
+    </div>
+
+<div class="col-md-8 jumbotron">
+
+                  <h1>Aplicación PAC</h1>
+                        <p>Aplicación PAC en ruby on rails
+                                <%= link_to "Enlace a facebook", "http://facebook.com" %>
+                        </p>
+                        <p>
+                                <%= link_to "Registrarse", new_user_registration_path, :class=> "btn btn-primary btn-large"%>
+                        </p>
+
+
+</div>
+</div>
+<% end %>
